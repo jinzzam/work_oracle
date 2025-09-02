@@ -26,5 +26,5 @@ select s.name "STU_NAME", d.dname "DEPT_NAME", f.name "PROF_NAME"
   from student s 
   INNER join professor f 
     on s.profno = f.profno
-  inner join department d
+  INNER join department d
     on d.deptno = f.deptno;
