@@ -13,12 +13,12 @@ to_char(((sal*12)+comm)*1.15, '$999,999') "15% up"
 from emp
 where exists comm ;
 
-select empno,
-        ename,
-        to_char(hiredate, 'yyyy-mm-dd')
-        ,to_char((sal*12)+comm, '$999,999') "sal"
-        ,to_char(((sal*12)+comm)*1.15, '$999,999') "15% up"
-        from emp;
+select empno
+     , ename
+     , to_char(hiredate, 'yyyy-mm-dd')
+     , to_char((sal*12)+comm, '$999,999') "sal"
+     , to_char(((sal*12)+comm)*1.15, '$999,999') "15% up"
+  from emp;
         
 select 'A'
     , decode('A', 'B', 1) D  
@@ -130,10 +130,10 @@ select name
 select name
     ,tel
     ,case (substr(tel , 1 ,instr(tel, ')')-1)) when '02' then 'SEOUL'
-                                             when '031' then 'GYEONGGI'
-                                            when  '051' then 'BUSAN'
-                                            when '052' then 'ULSAN'
-                                            when '055' then 'GYEONGNAM' 
+                                               when '031' then 'GYEONGGI'
+                                               when '051' then 'BUSAN'
+                                               when '052' then 'ULSAN'
+                                               when '055' then 'GYEONGNAM' 
                                                 else 'ETC' 
                                             end "LOC"
                                         from student 
