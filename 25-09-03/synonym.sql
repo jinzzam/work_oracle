@@ -3,11 +3,17 @@ drop SYNONYM e;
 SELECT *
   FROM user_synonyms;
 
-create SYNONYM e
+create SYNONYM em
    FOR EMP;
+
+create SYNONYM e
+   FOR DEPARTMENT;
   
 SELECT *
-  FROM EMP;
+  FROM DEPARTMENT;
   
 SELECT *
   FROM e;
+  
+SELECT *
+  FROM em;

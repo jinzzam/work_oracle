@@ -52,3 +52,7 @@ select name
  where weight > (select avg(weight)
                    from student
                   where deptno1 = 201);
+                  
+select avg(weight)
+                   from student
+                  where deptno1 = 201;

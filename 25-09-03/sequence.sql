@@ -1,7 +1,7 @@
 drop SEQUENCE jno_seq_rev;
 drop SEQUENCE jno_seq;
 
-SELECT jno_seq_rev.nextval FROM dual;
+SELECT jnos_seq_rev.nextval FROM dual;
 SELECT jno_seq_rev.currval FROM dual;
 
 CREATE SEQUENCE jno_seq_rev
@@ -13,7 +13,8 @@ MINVALUE 0;
 
 ALTER SEQUENCE jno_seq
 MAXVALUE 120
-NOCYCLE 
+MINVALUE 90
+CYCLE 
 CACHE 10;
 
 --2
